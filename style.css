@@ -1,3 +1,4 @@
+
 body{
 
 margin:0;
@@ -76,8 +77,48 @@ border:3px solid #e76f51;
 
 }
 
-.order-button:hover{
+/* -------- page commande -------- */
 
-background:#e76f51;
+.input-box{
+
+display:flex;
+align-items:center;
+border:1px solid #ccc;
+padding:10px;
+margin:10px 0;
+border-radius:8px;
+background:white;
+
+}
+
+.input-box i{
+
+margin-right:10px;
+color:orange;
+
+}
+
+.input-box input,
+.input-box select{
+
+border:none;
+outline:none;
+width:100%;
+font-size:16px;
+
+}
+
+.price{
+
+font-size:18px;
+font-weight:bold;
+
+}
+
+.payment{
+
+color:green;
+font-size:18px;
+font-weight:bold;
 
 }
