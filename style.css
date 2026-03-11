@@ -1,78 +1,102 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #fff8e1;
-    margin: 0;
-    padding: 0;
+body{
+
+font-family: Arial;
+background:#fff8e1;
+text-align:center;
+margin:0;
+
 }
 
-header {
-    background: #f4a261;
-    padding: 20px 0;
-    color: black;
+header{
+
+background:#f4a261;
+padding:20px;
+
 }
 
-.container {
-    max-width: 700px;
-    margin: 30px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px gray;
+.logo{
+
+width:120px;
+
 }
 
-.logo {
-    width: 150px;
-    margin-bottom: 15px;
+.container{
+
+width:500px;
+margin:auto;
+background:white;
+padding:25px;
+margin-top:30px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+
 }
 
-input, select {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    width: 80%;
-    font-size: 16px;
+input,select{
+
+width:80%;
+padding:10px;
+margin:10px;
+
 }
 
-button, .order-button {
-    background: #f4a261;
-    border: 2px solid #e76f51;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 8px;
-    margin-top: 15px;
-    text-decoration: none;
-    color: black;
+.honey-img{
+
+width:280px;
+margin:15px;
+border-radius:10px;
+
 }
 
-button:hover, .order-button:hover {
-    background: #e76f51;
+.honey-gallery{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+
 }
 
-.honey-img {
-    width: 300px;
-    margin: 10px 0;
-    border-radius: 10px;
+.honey-gallery img{
+
+width:160px;
+margin:8px;
+border-radius:10px;
+
 }
 
-.honey-gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 20px 0;
+.order-button{
+
+display:inline-block;
+background:orange;
+padding:12px 30px;
+border-radius:8px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+border:2px solid #e76f51;
+
 }
 
-.gallery-img {
-    width: 150px;
-    margin: 5px;
-    border-radius: 8px;
-    cursor: pointer;
+button{
+
+background:orange;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+cursor:pointer;
+
 }
 
-.order-button {
-    display: inline-block;
-    border: 2px solid #e76f51;
-    padding: 12px 30px;
-    font-weight: bold;
+.total{
+
+font-size:18px;
+font-weight:bold;
+
+}
+
+.payment{
+
+color:green;
+font-weight:bold;
+
 }
