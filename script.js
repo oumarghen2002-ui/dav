@@ -6,7 +6,7 @@ const quantityInput = document.getElementById("quantity");
 const nameInput = document.getElementById("name");
 const phoneInput = document.getElementById("phone");
 
-// Changer l'image et le prix selon le choix
+// Mettre à jour l'image et le prix quand on change le type de miel
 honeyType.addEventListener("change", () => {
     const selectedOption = honeyType.options[honeyType.selectedIndex];
     const price = selectedOption.value;
