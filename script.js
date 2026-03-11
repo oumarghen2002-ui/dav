@@ -5,7 +5,7 @@ const quantityInput = document.getElementById("quantity");
 const totalSpan = document.getElementById("total");
 const orderForm = document.getElementById("orderForm");
 
-// Changer image et prix selon le type de miel
+// Mettre à jour l'image et le prix
 honeyType.addEventListener("change", () => {
     const selectedOption = honeyType.options[honeyType.selectedIndex];
     honeyImage.src = selectedOption.dataset.img;
@@ -14,17 +14,13 @@ honeyType.addEventListener("change", () => {
     calculateTotal();
 });
 
-// Calculer le total quand la quantité change
+// Calculer le total
 quantityInput.addEventListener("input", calculateTotal);
 
 function calculateTotal() {
     const price = parseFloat(priceSpan.textContent);
     const quantity = parseFloat(quantityInput.value);
-    if(!isNaN(quantity) && quantity > 0){
-        totalSpan.textContent = (price * quantity).toFixed(2);
-    } else {
-        totalSpan.textContent = 0;
-    }
+    totalSpan.textContent = (!isNaN(quantity) && quantity > 0) ? (price * quantity).toFixed(2) : 0;
 }
 
 // Soumettre le formulaire
@@ -45,7 +41,6 @@ orderForm.addEventListener("submit", (e) => {
 المجموع: ${total} درهم
 الدفع عند الاستلام`);
 });
-
  
 
 
