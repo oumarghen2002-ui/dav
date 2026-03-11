@@ -33,3 +33,35 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
     .then(() => alert("Commande envoyée !"))
     .catch(err => alert("Erreur : " + err));
 });
+// script.js
+
+// Récupérer les éléments HTML
+const honeyType = document.getElementById("honeyType");
+const priceSpan = document.getElementById("price");
+const quantitySelect = document.getElementById("quantity");
+const orderForm = document.getElementById("orderForm");
+
+// Fonction pour mettre à jour le prix affiché
+function updatePrice() {
+    const pricePerKg = parseFloat(honeyType.value);
+    priceSpan.textContent = pricePerKg;
+}
+
+// Mettre à jour le prix quand on change le type de miel
+honeyType.addEventListener("change", updatePrice);
+
+// Quand on soumet le formulaire
+orderForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const pricePerKg = parseFloat(honeyType.value);
+    const quantity = parseFloat(quantitySelect.value);
+
+    const total = pricePerKg * quantity;
+
+    alert(`Commande reçue !\nNom: ${name}\nTéléphone: ${phone}\nType de miel: ${honeyType.options[honeyType.selectedIndex].text}\nQuantité: ${quantity} kg\nPrix total: ${total} DH`);
+
+    // Ici tu peux ajouter le code pour envoyer sur Telegram si tu veux
+});
