@@ -13,64 +13,53 @@ header {
 }
 
 header .logo {
-    width: 100px;
+    width: 120px;  /* logo plus grand */
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
+h1, h2 {
+    margin: 5px 0;
+}
+
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin: 20px;
-}
-
-/* Galerie des miels */
-.product-gallery {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
     justify-content: center;
+    margin: 30px;
 }
 
-.honey-card {
-    background: white;
-    padding: 10px;
-    width: 180px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px gray;
-}
-
-.honey-card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.honey-card p {
-    font-weight: bold;
-}
-
-/* Section commande */
 .order-section {
     background: white;
-    padding: 20px;
-    width: 400px;
+    padding: 30px;
+    width: 450px; /* section plus large */
     border-radius: 15px;
     box-shadow: 0 0 15px gray;
 }
 
-.order-section img {
-    width: 80%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+.honey-selection {
+    margin-bottom: 20px;
 }
 
-input, select, button {
+.honey-selection select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.honey-img {
+    width: 80%; /* image plus grande */
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+input, button {
     display: block;
     margin: 10px auto;
     padding: 10px;
-    width: 80%;
+    width: 90%;
     border-radius: 5px;
     font-size: 16px;
 }
@@ -89,7 +78,7 @@ button:hover {
 .payment-info {
     font-weight: bold;
     color: #e76f51;
+    margin-bottom: 15px;
 }
-
 
 
