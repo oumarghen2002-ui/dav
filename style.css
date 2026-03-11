@@ -1,1 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #fff8e1;
+}
 
+.product {
+    background: white;
+    padding: 20px;
+    margin: auto;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+input, select {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+}
+
+button {
+    background: #f4a261;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
