@@ -1,71 +1,71 @@
 body {
     font-family: Arial, sans-serif;
+    text-align: center;
     background: #fff8e1;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 header {
     background: #f4a261;
-    color: white;
     padding: 20px 0;
-}
-
-header .logo {
-    width: 120px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    color: black;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-}
-
-.order-section {
+    max-width: 600px;
+    margin: 30px auto;
     background: white;
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 15px gray;
-    width: 450px;
+    box-shadow: 0 0 10px gray;
 }
 
-.honey-img {
-    width: 80%;
-    margin: 10px auto;
-    display: block;
-    border-radius: 10px;
+.logo {
+    width: 150px;
+    margin-bottom: 15px;
 }
 
-input, select, button {
+input, select {
     display: block;
     margin: 10px auto;
     padding: 10px;
-    width: 90%;
-    border-radius: 5px;
+    width: 80%;
     font-size: 16px;
 }
 
-button {
-    background: #e76f51;
-    color: white;
+button, .order-button {
+    background: #f4a261;
     border: none;
-    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: black;
 }
 
-button:hover {
-    background: #d9534f;
+.honey-img {
+    width: 250px;
+    margin: 10px 0;
+    border-radius: 10px;
 }
 
-.payment-info {
-    font-weight: bold;
-    color: #2a9d8f;
+.honey-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
 
-#total {
-    font-weight: bold;
-    color: #e76f51;
+.gallery-img {
+    width: 100px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.order-button:hover, button:hover {
+    background: #e76f51;
 }
