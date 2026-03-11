@@ -121,3 +121,83 @@ font-size:18px;
 font-weight:bold;
 
 }
+.container{
+
+width:450px;
+margin:auto;
+background:white;
+padding:25px;
+margin-top:30px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+
+}
+
+.input-box{
+
+display:flex;
+align-items:center;
+border:1px solid #ccc;
+padding:10px;
+margin:10px 0;
+border-radius:8px;
+background:white;
+
+}
+
+.input-box i{
+
+margin-right:10px;
+color:orange;
+
+}
+
+.input-box input,
+.input-box select{
+
+border:none;
+outline:none;
+width:100%;
+font-size:16px;
+
+}
+
+.honey-img{
+
+width:280px;
+margin:15px;
+border-radius:10px;
+
+}
+
+.price{
+
+font-size:18px;
+font-weight:bold;
+
+}
+
+.total{
+
+font-size:18px;
+font-weight:bold;
+
+}
+
+.payment{
+
+color:green;
+font-weight:bold;
+font-size:18px;
+
+}
+
+button{
+
+background:orange;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+cursor:pointer;
+
+}
