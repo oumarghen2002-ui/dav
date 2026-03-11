@@ -1,4 +1,3 @@
-/* Style général */
 body {
     font-family: Arial, sans-serif;
     background: #fff8e1;
@@ -19,20 +18,20 @@ header .logo {
     margin-bottom: 10px;
 }
 
-/* Conteneur principal */
 .container {
     display: flex;
-    justify-content: center;
-    margin: 30px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 20px;
 }
 
 /* Galerie des miels */
-.honey-gallery {
+.product-gallery {
     display: flex;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
 }
 
 .honey-card {
@@ -41,7 +40,6 @@ header .logo {
     width: 180px;
     border-radius: 10px;
     box-shadow: 0 0 10px gray;
-    text-align: center;
 }
 
 .honey-card img {
@@ -53,37 +51,22 @@ header .logo {
     font-weight: bold;
 }
 
-.honey-card button {
-    background: #2a9d8f;
-    border: none;
-    padding: 10px;
-    color: white;
-    cursor: pointer;
-    margin-top: 5px;
-    width: 100%;
-}
-
-.honey-card button:hover {
-    background: #21867a;
-}
-
-/* Formulaire de commande */
-#orderFormContainer {
+/* Section commande */
+.order-section {
     background: white;
     padding: 20px;
-    margin-top: 20px;
+    width: 400px;
     border-radius: 15px;
     box-shadow: 0 0 15px gray;
-    width: 400px;
 }
 
-#orderFormContainer img {
+.order-section img {
     width: 80%;
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
-input, button {
+input, select, button {
     display: block;
     margin: 10px auto;
     padding: 10px;
@@ -93,21 +76,20 @@ input, button {
 }
 
 button {
-    background: #e76f51;
+    background: #2a9d8f;
+    color: white;
+    border: none;
     font-weight: bold;
 }
 
 button:hover {
-    background: #d9534f;
+    background: #21867a;
 }
 
 .payment-info {
     font-weight: bold;
-    color: #2a9d8f;
-    margin-top: 10px;
+    color: #e76f51;
 }
 
-/* Masquer initialement le formulaire */
-.hidden {
-    display: none;
-}
+
+
