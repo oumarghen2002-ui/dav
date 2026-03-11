@@ -1,27 +1,89 @@
+/* Style général */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     background: #fff8e1;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
-.product {
+header {
+    background: #f4a261;
+    color: white;
+    padding: 20px 0;
+}
+
+header .logo {
+    width: 100px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    flex-wrap: wrap;
+}
+
+/* Galerie des miels */
+.honey-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.honey-card {
+    background: white;
+    padding: 10px;
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    text-align: center;
+}
+
+.honey-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.honey-card p {
+    font-weight: bold;
+}
+
+.honey-card button {
+    background: #2a9d8f;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.honey-card button:hover {
+    background: #21867a;
+}
+
+/* Formulaire de commande */
+#orderFormContainer {
     background: white;
     padding: 20px;
-    margin: 40px auto;
-    width: 400px;
-    border-radius: 10px;
+    margin-top: 20px;
+    border-radius: 15px;
     box-shadow: 0 0 15px gray;
+    width: 400px;
 }
 
-.product img {
+#orderFormContainer img {
     width: 80%;
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
-input, select, button {
+input, button {
     display: block;
     margin: 10px auto;
     padding: 10px;
@@ -31,19 +93,21 @@ input, select, button {
 }
 
 button {
-    background: #f4a261;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
+    background: #e76f51;
     font-weight: bold;
 }
 
 button:hover {
-    background: #e76f51;
+    background: #d9534f;
 }
 
 .payment-info {
     font-weight: bold;
     color: #2a9d8f;
     margin-top: 10px;
+}
+
+/* Masquer initialement le formulaire */
+.hidden {
+    display: none;
 }
