@@ -1,40 +1,33 @@
-// script.js
-
 // Récupérer les éléments HTML
-let honeySelect = document.getElementById("honeyType");
-let priceDisplay = document.getElementById("price");
-let quantitySelect = document.getElementById("quantity");
-let orderForm = document.getElementById("orderForm");
+const honeyType = document.getElementById("honeyType");
+const priceSpan = document.getElementById("price");
+const quantityInput = document.getElementById("quantity");
+const orderForm = document.getElementById("orderForm");
 
 // Mettre à jour le prix automatiquement selon le type de miel
-honeySelect.addEventListener("change", function() {
-    priceDisplay.textContent = honeySelect.value;
+honeyType.addEventListener("change", function() {
+    priceSpan.textContent = honeyType.value;
 });
 
-// Envoyer la commande sur Telegram
-orderForm.addEventListener("submit", function(e){
-    e.preventDefault(); // Empêche le rechargement de la page
+// Quand on soumet le formulaire
+orderForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Empêche le rechargement de la page
 
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-    let quantity = parseFloat(quantitySelect.value); // convertir en nombre
-    let honeyTypeText = honeySelect.options[honeySelect.selectedIndex].text;
-    let price = parseFloat(honeySelect.value); // convertir en nombre
-    let total = quantity * price;
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const pricePerKg = parseFloat(honeyType.value);
+    const quantity = parseFloat(quantityInput.value);
 
-    let message = `Nouvelle commande 🍯\nNom: ${name}\nTel: ${phone}\nType: ${honeyTypeText}\nQuantité: ${quantity} kg\nPrix total: ${total} DH`;
+    if(isNaN(quantity) || quantity <= 0){
+        alert("الرجاء إدخال كمية صحيحة أكبر من صفر");
+        return;
+    }
 
-    let token = "TON_BOT_TOKEN";    // ton bot Telegram
-    let chat_id = "TON_CHAT_ID";    // ton chat ID
-    let url = `https://api.telegram.org/bot${token}/sendMessage`;
+    const total = pricePerKg * quantity;
 
-    fetch(url, {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({chat_id: chat_id, text: message})
-    })
-    .then(() => alert("Commande envoyée !"))
-    .catch(err => alert("Erreur : " + err));
+    alert(`تم استلام طلبك 🍯\nالاسم: ${name}\nالهاتف: ${phone}\nنوع العسل: ${honeyType.options[honeyType.selectedIndex].text}\nالكمية: ${quantity} كغ\nالمجموع: ${total} درهم`);
+
+    // Ici tu peux ajouter le code pour envoyer sur Telegram si tu veux
 });
 
  
