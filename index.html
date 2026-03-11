@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+
+
+    
+   <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -13,19 +16,34 @@
 <div class="product">
     <h3>Choisir le type de miel</h3>
 
-    <label for="honeyType">Type de miel :</label>
+    <label for="honeyType">نوع العسل :</label>
     <select id="honeyType">
-        <option value="150">Miel d'oranger - 150 DH/kg</option>
-        <option value="200">Miel de thym - 200 DH/kg</option>
-        <option value="180">Miel de fleurs - 180 DH/kg</option>
+        <option value="200">عسل السدر - 200 DH/kg</option>
+        <option value="180">عسل اليمون - 180 DH/kg</option>
+        <option value="150">عسل الكرباز - 150 DH/kg</option>
+        <option value="220">عسل الزعتر - 220 DH/kg</option>
     </select>
 
-    <p>Prix : <span id="price">150</span> DH</p>
+    <p>ثمن الكيلوغرام : <span id="price">200</span> DH</p>
 
     <form id="orderForm">
         <input type="text" id="name" placeholder="Votre nom" required>
         <input type="text" id="phone" placeholder="Votre téléphone" required>
-        <input type="number" id="quantity" placeholder="Quantité" required>
+        
+        <label for="quantity">الكمية :</label>
+        <select id="quantity" required>
+            <option value="0.5">0.5 kg</option>
+            <option value="1">1 kg</option>
+            <option value="1.5">1.5 kg</option>
+            <option value="2">2 kg</option>
+            <option value="2.5">2.5 kg</option>
+            <option value="3">3 kg</option>
+            <option value="3.5">3.5 kg</option>
+            <option value="4">4 kg</option>
+            <option value="4.5">4.5 kg</option>
+            <option value="5">5 kg</option>
+        </select>
+
         <button type="submit">Commander</button>
     </form>
 </div>
