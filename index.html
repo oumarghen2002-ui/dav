@@ -13,15 +13,19 @@
 <div class="product">
     <h3>اختر نوع العسل</h3>
 
+    <!-- Photos des types de miel -->
+    <img id="honeyImage" src="seder.jpg" alt="عسل السدر">
+
     <label for="honeyType">نوع العسل :</label>
     <select id="honeyType">
-        <option value="200">عسل السدر - 200 درهم/كغ</option>
-        <option value="180">عسل اليمون - 180 درهم/كغ</option>
-        <option value="150">عسل الكرباز - 150 درهم/كغ</option>
-        <option value="220">عسل الزعتر - 220 درهم/كغ</option>
+        <option value="200" data-img="seder.jpg">عسل السدر - 200 درهم/كغ</option>
+        <option value="180" data-img="lemon.jpg">عسل اليمون - 180 درهم/كغ</option>
+        <option value="150" data-img="karbaz.jpg">عسل الكرباز - 150 درهم/كغ</option>
+        <option value="220" data-img="zaatar.jpg">عسل الزعتر - 220 درهم/كغ</option>
     </select>
 
     <p>ثمن الكيلوغرام : <span id="price">200</span> درهم</p>
+    <p class="payment-info">الدفع عند الاستلام</p>
 
     <form id="orderForm">
         <label for="name">الاسم :</label>
@@ -40,3 +44,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+        
