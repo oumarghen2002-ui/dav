@@ -2,45 +2,60 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>طلب العسل - جمعية AMSKO</title>
+<title>طلب العسل</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-    <img src="images/logo.png" alt="شعار جمعية AMSKO" class="logo">
-    <h1>طلب العسل الطبيعي</h1>
+<img src="images/logo.png" class="logo">
+<h1>طلب العسل</h1>
 </header>
 
-<main class="container">
+<div class="container">
 
-    <form id="orderForm">
-        <label for="name">الاسم :</label>
-        <input type="text" id="name" placeholder="ادخل اسمك" required>
+<form id="orderForm">
 
-        <label for="phone">الهاتف :</label>
-        <input type="text" id="phone" placeholder="ادخل رقم هاتفك" required>
+<label>الاسم</label>
+<input type="text" id="name" required>
 
-        <label for="honeyType">اختر نوع العسل :</label>
-        <select id="honeyType" required>
-            <option value="200" data-img="images/seder.jpg" data-price="200">عسل السدر</option>
-            <option value="180" data-img="images/lemon.jpg" data-price="180">عسل اليمون</option>
-            <option value="150" data-img="images/karbaz.jpg" data-price="150">عسل الكرباز</option>
-            <option value="220" data-img="images/zaatar.jpg" data-price="220">عسل الزعتر</option>
-            <option value="250" data-img="images/dghmos.jpg" data-price="250">عسل الدغموس</option>
-        </select>
+<label>الهاتف</label>
+<input type="text" id="phone" required>
 
-        <img id="honeyImage" src="images/seder.jpg" alt="عسل السدر" class="honey-img">
+<label>اختر نوع العسل</label>
 
-        <p>ثمن الكيلوغرام : <span id="price">200</span> درهم</p>
+<select id="honeyType">
 
-        <label for="quantity">الكمية (كغ) :</label>
-        <input type="number" id="quantity" placeholder="ادخل الكمية التي تريدها" step="0.1" min="0.1" required>
+<option data-img="images/seder.jpg" data-price="200">عسل السدر</option>
+<option data-img="images/lemon.jpg" data-price="180">عسل الليمون</option>
+<option data-img="images/karbaz.jpg" data-price="150">عسل الكرباز</option>
+<option data-img="images/zaatar.jpg" data-price="220">عسل الزعتر</option>
+<option data-img="images/dghmos.jpg" data-price="250">عسل الدغموس</option>
 
-        <p>المجموع : <span id="total">0</span> درهم</p>
+</select>
 
-        <button type="submit" class="btn">إرسال الطلب</button>
-    </form>
+<img id="honeyImage" class="honey-img">
+
+<p>ثمن الكيلوغرام : <span id="price"></span> درهم</p>
+
+<label>الكمية (كغ)</label>
+<input type="number" id="quantity" min="1">
+
+<p class="total">المجموع : <span id="total">0</span> درهم</p>
+
+<p class="payment">الدفع عند الاستلام</p>
+
+<button type="submit">إرسال الطلب</button>
+
+</form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
 
 </main>
 
