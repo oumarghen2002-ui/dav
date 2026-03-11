@@ -5,6 +5,10 @@ const quantityInput = document.getElementById("quantity");
 const totalSpan = document.getElementById("total");
 const orderForm = document.getElementById("orderForm");
 
+// Ton bot Telegram
+const token = "8639610296:AAGy5gW7YETL3aK9wi2wtauv8kcjm7IHhyw"; // remplace par ton token
+const chat_id = "8526019135"; // ton chat ID
+
 // Mettre à jour l'image et le prix selon le miel sélectionné
 honeyType.addEventListener("change", () => {
     const selected = honeyType.options[honeyType.selectedIndex];
@@ -33,14 +37,20 @@ orderForm.addEventListener("submit", (e) => {
     const phone = document.getElementById("phone").value;
     const total = pricePerKg * quantity;
 
-    alert(`تم استلام طلبك 🍯
-الاسم: ${name}
-الهاتف: ${phone}
-نوع العسل: ${selectedHoney}
-الكمية: ${quantity} كغ
-المجموع: ${total} درهم
-الدفع عند الاستلام`);
+    // Message pour Telegram
+    const message = `تم استلام طلبك 🍯\nالاسم: ${name}\nالهاتف: ${phone}\nنوع العسل: ${selectedHoney}\nالكمية: ${quantity} كغ\nالمجموع: ${total} درهم\nالدفع عند الاستلام`;
+
+    // Envoyer la commande sur Telegram
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    fetch(url, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({chat_id: chat_id, text: message})
+    })
+    .then(() => alert("تم إرسال الطلب على Telegram!"))
+    .catch(err => alert("حدث خطأ: " + err));
 });
+ 
  
 
 
