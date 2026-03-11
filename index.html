@@ -1,50 +1,40 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>Coopérative AMSKO - Vente de miel</title>
+<title>جمعية AMSKO - بيع العسل</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>🍯 Coopérative AMSKO</h1>
-<h2>Commander du miel naturel</h2>
+<h1>🍯 جمعية AMSKO</h1>
+<h2>طلب العسل الطبيعي</h2>
 
 <div class="product">
-    <h3>Choisir le type de miel</h3>
+    <h3>اختر نوع العسل</h3>
 
     <label for="honeyType">نوع العسل :</label>
     <select id="honeyType">
-        <option value="200">عسل السدر - 200 DH/kg</option>
-        <option value="180">عسل اليمون - 180 DH/kg</option>
-        <option value="150">عسل الكرباز - 150 DH/kg</option>
-        <option value="220">عسل الزعتر - 220 DH/kg</option>
+        <option value="200">عسل السدر - 200 درهم/كغ</option>
+        <option value="180">عسل اليمون - 180 درهم/كغ</option>
+        <option value="150">عسل الكرباز - 150 درهم/كغ</option>
+        <option value="220">عسل الزعتر - 220 درهم/كغ</option>
     </select>
 
-    <p>ثمن الكيلوغرام : <span id="price">200</span> DH</p>
+    <p>ثمن الكيلوغرام : <span id="price">200</span> درهم</p>
 
     <form id="orderForm">
-        <input type="text" id="name" placeholder="Votre nom" required>
-        <input type="text" id="phone" placeholder="Votre téléphone" required>
+        <input type="text" id="name" placeholder="اسمك" required>
+        <input type="text" id="phone" placeholder="رقم هاتفك" required>
         
-        <label for="quantity">الكمية :</label>
-        <select id="quantity" required>
-            <option value="0.5">0.5 kg</option>
-            <option value="1">1 kg</option>
-            <option value="1.5">1.5 kg</option>
-            <option value="2">2 kg</option>
-            <option value="2.5">2.5 kg</option>
-            <option value="3">3 kg</option>
-            <option value="3.5">3.5 kg</option>
-            <option value="4">4 kg</option>
-            <option value="4.5">4.5 kg</option>
-            <option value="5">5 kg</option>
-        </select>
+        <label for="quantity">الكمية (بالكغ) :</label>
+        <input type="number" id="quantity" placeholder="ادخل الكمية التي تريدها" step="0.1" min="0.1" required>
 
-        <button type="submit">Commander</button>
+        <button type="submit">طلب</button>
     </form>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
+   
