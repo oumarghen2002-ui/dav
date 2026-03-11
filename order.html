@@ -1,50 +1,73 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
+
 <meta charset="UTF-8">
 <title>طلب العسل</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
 
 <header>
+
 <img src="images/logo.png" class="logo">
-<h1>طلب العسل</h1>
+
+<h1>طلب العسل الطبيعي</h1>
+
 </header>
 
 <div class="container">
 
 <form id="orderForm">
 
-<label>الاسم</label>
-<input type="text" id="name" required>
+<div class="input-box">
+<i class="fa fa-user"></i>
+<input type="text" id="name" placeholder="الاسم الكامل" required>
+</div>
 
-<label>الهاتف</label>
-<input type="text" id="phone" required>
+<div class="input-box">
+<i class="fa fa-phone"></i>
+<input type="text" id="phone" placeholder="رقم الهاتف" required>
+</div>
 
-<label>اختر نوع العسل</label>
-
+<div class="input-box">
+<i class="fa fa-jar"></i>
 <select id="honeyType">
 
 <option data-img="images/seder.jpg" data-price="200">عسل السدر</option>
+
 <option data-img="images/lemon.jpg" data-price="180">عسل الليمون</option>
+
 <option data-img="images/karbaz.jpg" data-price="150">عسل الكرباز</option>
+
 <option data-img="images/zaatar.jpg" data-price="220">عسل الزعتر</option>
+
 <option data-img="images/dghmos.jpg" data-price="250">عسل الدغموس</option>
 
 </select>
+</div>
 
 <img id="honeyImage" class="honey-img">
 
-<p>ثمن الكيلوغرام : <span id="price"></span> درهم</p>
+<p class="price">ثمن الكيلوغرام : <span id="price"></span> درهم</p>
 
-<label>الكمية (كغ)</label>
-<input type="number" id="quantity" min="1">
+<div class="input-box">
+<i class="fa fa-weight-scale"></i>
+<input type="number" id="quantity" placeholder="الكمية بالكيلوغرام">
+</div>
 
 <p class="total">المجموع : <span id="total">0</span> درهم</p>
 
-<p class="payment">الدفع عند الاستلام</p>
+<p class="payment">
+<i class="fa fa-truck"></i>
+الدفع عند الاستلام
+</p>
 
 <button type="submit">إرسال الطلب</button>
 
@@ -54,11 +77,5 @@
 
 <script src="script.js"></script>
 
-</body>
-</html>
-
-</main>
-
-<script src="script.js"></script>
 </body>
 </html>
