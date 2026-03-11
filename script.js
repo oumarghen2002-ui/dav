@@ -1,27 +1,43 @@
-const honeyType = document.getElementById("honeyType");
-const priceSpan = document.getElementById("price");
-const quantityInput = document.getElementById("quantity");
-const orderForm = document.getElementById("orderForm");
+const orderButtons = document.querySelectorAll(".orderBtn");
+const orderFormContainer = document.getElementById("orderFormContainer");
 const honeyImage = document.getElementById("honeyImage");
+const priceSpan = document.getElementById("price");
+const orderForm = document.getElementById("orderForm");
+const quantityInput = document.getElementById("quantity");
+const nameInput = document.getElementById("name");
+const phoneInput = document.getElementById("phone");
 
-// Changer le prix et l'image automatiquement selon le type de miel
-honeyType.addEventListener("change", function() {
-    const price = parseFloat(honeyType.value);
-    priceSpan.textContent = price;
+// Quand on clique sur "طلب" sur un miel
+orderButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const price = button.dataset.price;
+        const name = button.dataset.name;
+        const img = button.dataset.img;
 
-    const imgSrc = honeyType.options[honeyType.selectedIndex].dataset.img;
-    honeyImage.src = imgSrc;
-    honeyImage.alt = honeyType.options[honeyType.selectedIndex].text;
+        honeyImage.src = img;
+        honeyImage.alt = name;
+        priceSpan.textContent = price;
+
+        // Réinitialiser le formulaire
+        quantityInput.value = "";
+        nameInput.value = "";
+        phoneInput.value = "";
+
+        // Afficher le formulaire
+        orderFormContainer.classList.remove("hidden");
+        orderFormContainer.scrollIntoView({ behavior: "smooth" });
+    });
 });
 
-// Quand on soumet le formulaire
+// Soumettre le formulaire
 orderForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const pricePerKg = parseFloat(honeyType.value);
     const quantity = parseFloat(quantityInput.value);
+    const name = nameInput.value;
+    const phone = phoneInput.value;
+    const pricePerKg = parseFloat(priceSpan.textContent);
+    const honeyName = honeyImage.alt;
 
     if(isNaN(quantity) || quantity <= 0){
         alert("الرجاء إدخال كمية صحيحة أكبر من صفر");
@@ -33,7 +49,7 @@ orderForm.addEventListener("submit", function(event) {
     alert(`تم استلام طلبك 🍯
 الاسم: ${name}
 الهاتف: ${phone}
-نوع العسل: ${honeyType.options[honeyType.selectedIndex].text}
+نوع العسل: ${honeyName}
 الكمية: ${quantity} كغ
 المجموع: ${total} درهم
 الدفع عند الاستلام`);
