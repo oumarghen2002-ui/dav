@@ -10,7 +10,7 @@ honeyType.addEventListener("change", () => {
     const selectedOption = honeyType.options[honeyType.selectedIndex];
     honeyImage.src = selectedOption.dataset.img;
     honeyImage.alt = selectedOption.text;
-    priceSpan.textContent = selectedOption.value;
+    priceSpan.textContent = selectedOption.dataset.price;
     calculateTotal();
 });
 
@@ -41,7 +41,6 @@ orderForm.addEventListener("submit", (e) => {
 المجموع: ${total} درهم
 الدفع عند الاستلام`);
 });
- 
 
 
  
