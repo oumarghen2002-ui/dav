@@ -7,41 +7,66 @@
 </head>
 <body>
 
-<h1>🍯 جمعية AMSKO</h1>
-<h2>طلب العسل الطبيعي</h2>
+<header>
+    <img src="logo.png" alt="شعار جمعية AMSKO" class="logo">
+    <h1>🍯 جمعية AMSKO</h1>
+    <h2>طلب العسل الطبيعي</h2>
+</header>
 
-<div class="product">
-    <h3>اختر نوع العسل</h3>
+<main class="container">
 
-    <!-- Photos des types de miel -->
-    <img id="honeyImage" src="seder.jpg" alt="عسل السدر">
+    <div class="product">
+        <h3>أنواع العسل المتاحة</h3>
 
-    <label for="honeyType">نوع العسل :</label>
-    <select id="honeyType">
-        <option value="200" data-img="seder.jpg">عسل السدر - 200 درهم/كغ</option>
-        <option value="180" data-img="lemon.jpg">عسل اليمون - 180 درهم/كغ</option>
-        <option value="150" data-img="karbaz.jpg">عسل الكرباز - 150 درهم/كغ</option>
-        <option value="220" data-img="zaatar.jpg">عسل الزعتر - 220 درهم/كغ</option>
-    </select>
+        <!-- Galerie des miels -->
+        <div class="honey-gallery">
+            <div class="honey-card">
+                <img src="seder.jpg" alt="عسل السدر">
+                <p>عسل السدر - 200 درهم/كغ</p>
+                <button class="orderBtn" data-price="200" data-name="عسل السدر" data-img="seder.jpg">طلب</button>
+            </div>
+            <div class="honey-card">
+                <img src="lemon.jpg" alt="عسل اليمون">
+                <p>عسل اليمون - 180 درهم/كغ</p>
+                <button class="orderBtn" data-price="180" data-name="عسل اليمون" data-img="lemon.jpg">طلب</button>
+            </div>
+            <div class="honey-card">
+                <img src="karbaz.jpg" alt="عسل الكرباز">
+                <p>عسل الكرباز - 150 درهم/كغ</p>
+                <button class="orderBtn" data-price="150" data-name="عسل الكرباز" data-img="karbaz.jpg">طلب</button>
+            </div>
+            <div class="honey-card">
+                <img src="zaatar.jpg" alt="عسل الزعتر">
+                <p>عسل الزعتر - 220 درهم/كغ</p>
+                <button class="orderBtn" data-price="220" data-name="عسل الزعتر" data-img="zaatar.jpg">طلب</button>
+            </div>
+        </div>
 
-    <p>ثمن الكيلوغرام : <span id="price">200</span> درهم</p>
-    <p class="payment-info">الدفع عند الاستلام</p>
+        <!-- Formulaire caché initialement -->
+        <div id="orderFormContainer" class="hidden">
+            <img id="honeyImage" src="" alt="">
+            <p>ثمن الكيلوغرام : <span id="price">0</span> درهم</p>
+            <p class="payment-info">الدفع عند الاستلام</p>
 
-    <form id="orderForm">
-        <label for="name">الاسم :</label>
-        <input type="text" id="name" placeholder="اسمك" required>
+            <form id="orderForm">
+                <label for="name">الاسم :</label>
+                <input type="text" id="name" placeholder="اسمك" required>
 
-        <label for="phone">الهاتف :</label>
-        <input type="text" id="phone" placeholder="رقم هاتفك" required>
-        
-        <label for="quantity">الكمية (بالكغ) :</label>
-        <input type="number" id="quantity" placeholder="أدخل الكمية التي تريدها" step="0.1" min="0.1" required>
+                <label for="phone">الهاتف :</label>
+                <input type="text" id="phone" placeholder="رقم هاتفك" required>
+                
+                <label for="quantity">الكمية (بالكغ) :</label>
+                <input type="number" id="quantity" placeholder="أدخل الكمية التي تريدها" step="0.1" min="0.1" required>
 
-        <button type="submit">طلب</button>
-    </form>
-</div>
+                <button type="submit">إرسال الطلب</button>
+            </form>
+        </div>
+
+    </div>
+
+</main>
 
 <script src="script.js"></script>
 </body>
 </html>
-        
+
