@@ -2,7 +2,7 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>جمعية AMSKO - بيع العسل</title>
+<title>جمعية AMSKO</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,45 +10,21 @@
 <header>
     <img src="images/logo.png" alt="شعار جمعية AMSKO" class="logo">
     <h1>جمعية AMSKO</h1>
-    <h2>طلب العسل الطبيعي</h2>
+    <h2>بيع العسل الطبيعي</h2>
 </header>
 
 <main class="container">
-
-    <div class="order-section">
-        <h3>اختر نوع العسل</h3>
-
-        <div class="honey-selection">
-            <label for="honeyType">نوع العسل :</label>
-            <select id="honeyType" required>
-                <option value="200" data-img="images/seder.jpg">عسل السدر - 200 درهم/كغ</option>
-                <option value="180" data-img="images/lemon.jpg">عسل اليمون - 180 درهم/كغ</option>
-                <option value="150" data-img="images/karbaz.jpg">عسل الكرباز - 150 درهم/كغ</option>
-                <option value="220" data-img="images/zaatar.jpg">عسل الزعتر - 220 درهم/كغ</option>
-            </select>
-
-            <img id="honeyImage" src="images/seder.jpg" alt="عسل السدر" class="honey-img">
-
-            <p>ثمن الكيلوغرام : <span id="price">200</span> درهم</p>
-            <p class="payment-info">الدفع عند الاستلام</p>
-        </div>
-
-        <form id="orderForm">
-            <label for="name">الاسم :</label>
-            <input type="text" id="name" placeholder="اسمك" required>
-
-            <label for="phone">الهاتف :</label>
-            <input type="text" id="phone" placeholder="رقم هاتفك" required>
-            
-            <label for="quantity">الكمية (بالكغ) :</label>
-            <input type="number" id="quantity" placeholder="أدخل الكمية التي تريدها" step="0.1" min="0.1" required>
-
-            <button type="submit">إرسال الطلب</button>
-        </form>
+    <p>مرحباً بكم في صفحة جمعية AMSKO. استعرض منتجاتنا الطبيعية واختر نوع العسل الذي ترغب فيه.</p>
+    
+    <div class="honey-gallery">
+        <img src="images/seder.jpg" alt="عسل السدر" class="gallery-img">
+        <img src="images/lemon.jpg" alt="عسل اليمون" class="gallery-img">
+        <img src="images/karbaz.jpg" alt="عسل الكرباز" class="gallery-img">
+        <img src="images/zaatar.jpg" alt="عسل الزعتر" class="gallery-img">
     </div>
 
+    <a href="order.html" class="order-button">طلب العسل</a>
 </main>
 
-<script src="script.js"></script>
 </body>
 </html>
