@@ -1,37 +1,40 @@
 const honeyType = document.getElementById("honeyType");
-const priceSpan = document.getElementById("price");
 const honeyImage = document.getElementById("honeyImage");
-const orderForm = document.getElementById("orderForm");
+const priceSpan = document.getElementById("price");
 const quantityInput = document.getElementById("quantity");
-const nameInput = document.getElementById("name");
-const phoneInput = document.getElementById("phone");
+const totalSpan = document.getElementById("total");
+const orderForm = document.getElementById("orderForm");
 
-// Mettre à jour l'image et le prix quand on change le type de miel
+// Changer image et prix selon le type de miel
 honeyType.addEventListener("change", () => {
     const selectedOption = honeyType.options[honeyType.selectedIndex];
-    const price = selectedOption.value;
-    const img = selectedOption.dataset.img;
-
-    priceSpan.textContent = price;
-    honeyImage.src = img;
+    honeyImage.src = selectedOption.dataset.img;
     honeyImage.alt = selectedOption.text;
+    priceSpan.textContent = selectedOption.value;
+    calculateTotal();
 });
+
+// Calculer le total quand la quantité change
+quantityInput.addEventListener("input", calculateTotal);
+
+function calculateTotal() {
+    const price = parseFloat(priceSpan.textContent);
+    const quantity = parseFloat(quantityInput.value);
+    if(!isNaN(quantity) && quantity > 0){
+        totalSpan.textContent = (price * quantity).toFixed(2);
+    } else {
+        totalSpan.textContent = 0;
+    }
+}
 
 // Soumettre le formulaire
 orderForm.addEventListener("submit", (e) => {
     e.preventDefault();
-
     const honeyName = honeyType.options[honeyType.selectedIndex].text;
-    const pricePerKg = parseFloat(honeyType.value);
+    const pricePerKg = parseFloat(priceSpan.textContent);
     const quantity = parseFloat(quantityInput.value);
-    const name = nameInput.value;
-    const phone = phoneInput.value;
-
-    if(isNaN(quantity) || quantity <= 0){
-        alert("الرجاء إدخال كمية صحيحة أكبر من صفر");
-        return;
-    }
-
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
     const total = pricePerKg * quantity;
 
     alert(`تم استلام طلبك 🍯
@@ -42,6 +45,7 @@ orderForm.addEventListener("submit", (e) => {
 المجموع: ${total} درهم
 الدفع عند الاستلام`);
 });
+
  
 
 
