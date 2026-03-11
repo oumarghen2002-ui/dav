@@ -8,60 +8,60 @@
 <body>
 
 <header>
-    <img src="logo.png" alt="شعار جمعية AMSKO" class="logo">
+    <img src="images/logo.png" alt="شعار جمعية AMSKO" class="logo">
     <h1>🍯 جمعية AMSKO</h1>
     <h2>طلب العسل الطبيعي</h2>
 </header>
 
 <main class="container">
 
-    <div class="product">
-        <h3>أنواع العسل المتاحة</h3>
-
-        <!-- Galerie des miels -->
-        <div class="honey-gallery">
-            <div class="honey-card">
-                <img src="seder.jpg" alt="عسل السدر">
-                <p>عسل السدر - 200 درهم/كغ</p>
-                <button class="orderBtn" data-price="200" data-name="عسل السدر" data-img="seder.jpg">طلب</button>
-            </div>
-            <div class="honey-card">
-                <img src="lemon.jpg" alt="عسل اليمون">
-                <p>عسل اليمون - 180 درهم/كغ</p>
-                <button class="orderBtn" data-price="180" data-name="عسل اليمون" data-img="lemon.jpg">طلب</button>
-            </div>
-            <div class="honey-card">
-                <img src="karbaz.jpg" alt="عسل الكرباز">
-                <p>عسل الكرباز - 150 درهم/كغ</p>
-                <button class="orderBtn" data-price="150" data-name="عسل الكرباز" data-img="karbaz.jpg">طلب</button>
-            </div>
-            <div class="honey-card">
-                <img src="zaatar.jpg" alt="عسل الزعتر">
-                <p>عسل الزعتر - 220 درهم/كغ</p>
-                <button class="orderBtn" data-price="220" data-name="عسل الزعتر" data-img="zaatar.jpg">طلب</button>
-            </div>
+    <div class="product-gallery">
+        <!-- Photos affichées comme interface -->
+        <div class="honey-card">
+            <img src="images/seder.jpg" alt="عسل السدر">
+            <p>عسل السدر - 200 درهم/كغ</p>
         </div>
+        <div class="honey-card">
+            <img src="images/lemon.jpg" alt="عسل اليمون">
+            <p>عسل اليمون - 180 درهم/كغ</p>
+        </div>
+        <div class="honey-card">
+            <img src="images/karbaz.jpg" alt="عسل الكرباز">
+            <p>عسل الكرباز - 150 درهم/كغ</p>
+        </div>
+        <div class="honey-card">
+            <img src="images/zaatar.jpg" alt="عسل الزعتر">
+            <p>عسل الزعتر - 220 درهم/كغ</p>
+        </div>
+    </div>
 
-        <!-- Formulaire caché initialement -->
-        <div id="orderFormContainer" class="hidden">
-            <img id="honeyImage" src="" alt="">
-            <p>ثمن الكيلوغرام : <span id="price">0</span> درهم</p>
+    <div class="order-section">
+        <h3>طلب العسل</h3>
+        <form id="orderForm">
+            <label for="honeyType">اختر نوع العسل :</label>
+            <select id="honeyType" required>
+                <option value="200" data-img="images/seder.jpg">عسل السدر - 200 درهم/كغ</option>
+                <option value="180" data-img="images/lemon.jpg">عسل اليمون - 180 درهم/كغ</option>
+                <option value="150" data-img="images/karbaz.jpg">عسل الكرباز - 150 درهم/كغ</option>
+                <option value="220" data-img="images/zaatar.jpg">عسل الزعتر - 220 درهم/كغ</option>
+            </select>
+
+            <img id="honeyImage" src="images/seder.jpg" alt="عسل السدر">
+
+            <p>ثمن الكيلوغرام : <span id="price">200</span> درهم</p>
             <p class="payment-info">الدفع عند الاستلام</p>
 
-            <form id="orderForm">
-                <label for="name">الاسم :</label>
-                <input type="text" id="name" placeholder="اسمك" required>
+            <label for="name">الاسم :</label>
+            <input type="text" id="name" placeholder="اسمك" required>
 
-                <label for="phone">الهاتف :</label>
-                <input type="text" id="phone" placeholder="رقم هاتفك" required>
-                
-                <label for="quantity">الكمية (بالكغ) :</label>
-                <input type="number" id="quantity" placeholder="أدخل الكمية التي تريدها" step="0.1" min="0.1" required>
+            <label for="phone">الهاتف :</label>
+            <input type="text" id="phone" placeholder="رقم هاتفك" required>
+            
+            <label for="quantity">الكمية (بالكغ) :</label>
+            <input type="number" id="quantity" placeholder="أدخل الكمية التي تريدها" step="0.1" min="0.1" required>
 
-                <button type="submit">إرسال الطلب</button>
-            </form>
-        </div>
-
+            <button type="submit">إرسال الطلب</button>
+        </form>
     </div>
 
 </main>
@@ -69,4 +69,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
