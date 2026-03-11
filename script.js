@@ -41,6 +41,7 @@ orderForm.addEventListener("submit", (e) => {
 المجموع: ${total} درهم
 الدفع عند الاستلام`);
 });
+ 
 
 
  
